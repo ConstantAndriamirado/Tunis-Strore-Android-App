@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- En-tête orange -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/orange_primary"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/btnRetour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&lt; Retour"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_marginRight="70dp"
+                    android:layout_gravity="start"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Se connecter"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Formulaire -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Email -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse e-mail ou numéro de téléphone"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="adresse@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_background"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Mot de passe -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mot de passe"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:text="*"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/eyeIcon" />
+
+                    <ImageView
+                        android:id="@+id/eyeIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_eye_closed"
+                        android:contentDescription="Afficher le mot de passe" />
+                </RelativeLayout>
+
+                <!-- Checkbox -->
+                <CheckBox
+                    android:id="@+id/rememberMeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Se souvenir de moi"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Bouton Se connecter -->
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Se connecter"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/orange_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_orange" />
+
+                <!-- Bouton Google -->
+                <Button
+                    android:id="@+id/buttonGoogleLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Se connecter avec Google"
+                    android:drawableStart="@drawable/ic_google"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/button_white_border"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Lien vers inscription -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vous n'avez pas de compte Tunis Store ?"
+                    android:textColor="@android:color/black"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/linkSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Inscrivez-vous"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+
+
+                <TextView
+                    android:id="@+id/forgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mot de passe oublié ?"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

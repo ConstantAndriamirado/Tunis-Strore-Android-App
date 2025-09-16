@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header orange -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@drawable/header_background"
+                android:gravity="center">
+
+                <!-- Ligne retour + ignore -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/btnRetour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&lt; Retour"
+                        android:minHeight="48dp"
+                        android:paddingVertical="12dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_marginRight="70dp"
+                        android:layout_gravity="start"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:id="@+id/btnIgnorer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ignorer"
+                        android:minHeight="48dp"
+                        android:paddingVertical="12dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_gravity="end"
+                        android:clickable="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="start" />
+            </LinearLayout>
+
+            <!-- Contenu principal -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <!-- Texte "Photo de profil" -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Photo de profil"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginTop="24dp" />
+
+                <!-- Cercle pour image -->
+                <View
+                    android:id="@+id/photoPlaceholder"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/circle_placeholder" />
+
+                <!-- Texte "Votre statut" -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Votre statut"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginTop="32dp" />
+
+                <!-- Spinner statut -->
+                <Spinner
+                    android:id="@+id/spinnerStatut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Texte "Votre sexe" -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Votre sexe"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginTop="24dp" />
+
+                <!-- Spinner sexe -->
+                <Spinner
+                    android:id="@+id/spinnerSexe"
+                    android:layout_width="match_parent"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Bouton continuer -->
+                <Button
+                    android:id="@+id/btnContinuer"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:text="Continuer"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/rounded_orange" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

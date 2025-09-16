@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NoBackgroundTintButton" parent="ThemeOverlay.MaterialComponents">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="NeutralButton" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/rounded_white_border</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+</resources>

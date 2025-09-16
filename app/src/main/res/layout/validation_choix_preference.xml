@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F2F2">
+
+        <!-- En-tête avec coins arrondis -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/header_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/ignorer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ignorer"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_gravity="end" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Que souhaitez-vous découvrir\nsur Appla TN"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+
+        <!-- Instruction -->
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Choisissez les catégories qui vous intéressent le plus pour recevoir des recommandations personnalisées."
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="24dp"/>
+
+        <!-- Titre catégories -->
+        <TextView
+            android:id="@+id/categories_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catégories :"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toBottomOf="@id/instruction"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Grille de catégories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gridCategories"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/categories_title"
+            app:layout_constraintBottom_toTopOf="@id/validerButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="16dp" />
+
+        <!-- Bouton Valider -->
+        <Button
+            android:id="@+id/validerButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Valider mes choix"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#FF4500"
+            android:background="@drawable/rounded_orange"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <TextView
+        android:id="@+id/labelDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de naissance"
+        android:textColor="#FF4216"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/dateField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelDate"
+        android:layout_marginTop="4dp"
+        android:hint="jj / mm / aaaa"
+        android:inputType="none"
+        android:focusable="false"
+        android:background="@drawable/bottom_border"
+        android:paddingEnd="48dp" />
+
+    <ImageView
+        android:id="@+id/iconCalendar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@id/dateField"
+        android:layout_alignBottom="@id/dateField"
+        android:src="@drawable/ic_calendar"
+        android:padding="4dp" />
+</RelativeLayout>
